@@ -6,7 +6,7 @@ import { MyContext } from "../../context/MyContext"
 
 const StyledDiv = styled.div`
     
-    width: 4055px;
+    width: 405px;
     height: auto;
     background: hsl(215, 27%, 12%);
     position: absolute;
@@ -21,6 +21,7 @@ const StyledDiv = styled.div`
     justify-content: center;
     flex-direction: column;
     color: ${props => props.theme.color.white};
+    z-index: 1000;
 
     h1 {
         font-weight: 700;

@@ -50,10 +50,10 @@ const StyledSubmitted = styled.div`
 
 export const Main = () => {
 
-    const { handleValor, valor } = useContext(MyContext)
-    const validaValor = (evento) => {
+    const { handleValor, valor, handleThanks} = useContext(MyContext)
+    const validaValor = () => {
         if (valor != 0) {
-            evento.target.parentNode.style.display = 'none'
+            handleThanks()
         }
     }
 

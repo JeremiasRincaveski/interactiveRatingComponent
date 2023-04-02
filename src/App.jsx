@@ -20,6 +20,11 @@ const GlobalStyled = createGlobalStyle`
 
 function App() {
   const [valor, setValor] = useState(0);
+  const [thanks, setThanks] = useState(false);
+
+  const handleThanks = () => {
+    setThanks(true)
+  }
 
   const handleValor = (evento) => {
     // const novoValor = evento.currentTarget.value
@@ -28,13 +33,22 @@ function App() {
     console.log(valor)
   }
 
+  const validaForm = () => {
+    console.log(valor)
+    if (valor != 0 && thanks) {
+      return <ThankYou/>
+    } else {
+      console.log('n passou')
+    }
+  }
 
   return (
-    <MyContext.Provider value={{ valor, handleValor, }}>
+    <MyContext.Provider value={{ valor, handleValor, handleThanks }}>
     <ThemeProvider theme={theme}>
       <GlobalStyled />
       <Background>
-        {<Main />}
+        <Main />
+        {validaForm()}
       </Background>
     </ThemeProvider>
     </MyContext.Provider>
