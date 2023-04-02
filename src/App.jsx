@@ -27,18 +27,12 @@ function App() {
   }
 
   const handleValor = (evento) => {
-    // const novoValor = evento.currentTarget.value
-    // setValor(novoValor)
     setValor(evento.currentTarget.value)
-    console.log(valor)
   }
 
   const validaForm = () => {
-    console.log(valor)
     if (valor != 0 && thanks) {
       return <ThankYou/>
-    } else {
-      console.log('n passou')
     }
   }
 
