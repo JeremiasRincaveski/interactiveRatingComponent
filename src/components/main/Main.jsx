@@ -53,8 +53,7 @@ export const Main = () => {
     const { handleValor, valor } = useContext(MyContext)
     const validaValor = (evento) => {
         if (valor != 0) {
-            evento.target.style.display = 'none'
-            return <ThankYou/>
+            evento.target.parentNode.style.display = 'none'
         }
     }
 
