@@ -21,13 +21,15 @@ function App() {
   const [valor, setValor] = useState(0);
 
   const handleValor = (evento) => {
+    // const novoValor = evento.currentTarget.value
+    // setValor(novoValor)
     setValor(evento.currentTarget.value)
     console.log(valor)
   }
 
 
   return (
-    <MyContext.Provider value={{ valor, handleValor }}>
+    <MyContext.Provider value={{ valor, handleValor, }}>
     <ThemeProvider theme={theme}>
       <GlobalStyled />
       <Background>

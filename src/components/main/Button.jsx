@@ -16,7 +16,7 @@ const StyledButton = styled.button`
 
 export const Button = ({valor, onClick, value }) => {
     return (
-        <StyledButton value={value} onClick={console.log(value)}>
+        <StyledButton value={value} onClick={onClick}>
         {valor}
         </StyledButton>
     )

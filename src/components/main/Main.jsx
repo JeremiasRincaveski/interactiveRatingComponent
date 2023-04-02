@@ -49,15 +49,15 @@ const StyledSubmitted = styled.div`
 
 export const Main = () => {
 
-    const { handleValor } = useContext(MyContext)
+    const { handleValor, valor } = useContext(MyContext)
 
-    // const renderiza = () => {
-    //     const botao = []
-    //     for (let index = 1; index <= 5; index++) {
-    //         botao.push(<Button onClick={handleValor} value={index} valor={index} />)
-    //     }
-    //     return botao
-    // }
+    const renderiza = () => {
+        const botao = []
+        for (let index = 1; index <= 5; index++) {
+            botao.push(<Button onClick={handleValor} value={index} valor={index} />)
+        }
+        return botao
+    }
 
     return (
             <StyledMain>
@@ -66,11 +66,7 @@ export const Main = () => {
                 <p>Please let us know how we did with your support request. All feedback is appreciated 
                 to help us improve our offering!</p>
                 <StyledDiv>
-                    <Button onClick={handleValor} value={1} valor={1} />
-                    <Button onClick={handleValor} value={2} valor={2} />
-                    <Button onClick={handleValor} value={3} valor={3} />
-                    <Button onClick={handleValor} value={4} valor={4} />
-                    <Button onClick={handleValor} value={5} valor={5} />
+                    {renderiza()}
                 </StyledDiv>
                 <StyledSubmitted>
                     SUBMIT
