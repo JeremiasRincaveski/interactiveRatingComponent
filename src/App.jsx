@@ -4,6 +4,7 @@ import { Main } from './components/main/Main'
 import { Background } from './components/background/Background'
 import { theme } from './theme/theme'
 import { useState } from 'react'
+import { ThankYou } from './components/main/ThankYou'
 
 const GlobalStyled = createGlobalStyle`
   html, body {
@@ -33,9 +34,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyled />
       <Background>
-        <Main>
-      
-        </Main>
+        {<Main />}
       </Background>
     </ThemeProvider>
     </MyContext.Provider>
