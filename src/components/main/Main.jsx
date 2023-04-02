@@ -51,11 +51,9 @@ const StyledSubmitted = styled.div`
 export const Main = () => {
 
     const { handleValor, valor } = useContext(MyContext)
-    const [ estado, setEstado ] = useState(false)
     const validaValor = (evento) => {
-        setEstado(true)
-        if (estado == true) {
-            console.log(estado);
+        if (valor != 0) {
+            evento.target.style.display = 'none'
             return <ThankYou/>
         }
     }
