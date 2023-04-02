@@ -5,7 +5,6 @@ import { useContext } from "react"
 import { MyContext } from "../../context/MyContext"
 
 const StyledDiv = styled.div`
-    
     width: 405px;
     height: auto;
     background: hsl(215, 27%, 12%);
