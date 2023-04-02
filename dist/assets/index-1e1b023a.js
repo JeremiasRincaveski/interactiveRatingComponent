@@ -60,7 +60,6 @@ Error generating stack: `+o.message+`
         cursor: pointer;
     }
 `,ga=({valor:e,onClick:t,value:n})=>ce(hm,{value:n,onClick:t,children:e}),mm="/assets/illustration-thank-you-a52834b7.svg",vm=Wn.div`
-    
     width: 405px;
     height: auto;
     background: hsl(215, 27%, 12%);
